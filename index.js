@@ -1,5 +1,5 @@
 
-const arrowFunction = ()=> alert("Hello world");
+const arrowFunction = ()=> console.log("Hello world");
 
 arrowFunction();
 
@@ -17,3 +17,12 @@ class Student {
 }
 const obj  = new Student("sohelrana", 90083);
 obj.getInfo()
+
+const myPromise = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve("This is a Promise");
+    }, 2000)
+})
+
+myPromise
+.then((res)=> console.log(res));
